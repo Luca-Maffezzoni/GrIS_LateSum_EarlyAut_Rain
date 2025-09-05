@@ -1,0 +1,10 @@
+Day;Values
+17 may;627.89
+2 june;677.30
+19 june;720.83
+5 july;592.03
+22 july;441.53
+2 august;449.11
+13 august;462.32
+24 august;534.48
+4 september;518.10

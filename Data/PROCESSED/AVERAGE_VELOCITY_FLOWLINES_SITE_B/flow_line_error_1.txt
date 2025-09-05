@@ -1,0 +1,10 @@
+Day;Values
+17 may;8.13
+2 june;5.96
+19 june;8.69
+5 july;4.96
+22 july;6.29
+2 august;6.00
+13 august;4.98
+24 august;5.19
+4 september;5.47

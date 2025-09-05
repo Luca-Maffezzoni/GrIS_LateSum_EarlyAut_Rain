@@ -1,0 +1,12 @@
+Day;Values
+9 May;92.61
+20 May;80.22
+31 May;75.73
+11 June;152.61
+22 June;209.61
+3 July;135.41
+19 July;162.67
+10 August;111.87
+27 August;69.97
+7 September;102.86
+18 September;70.96
