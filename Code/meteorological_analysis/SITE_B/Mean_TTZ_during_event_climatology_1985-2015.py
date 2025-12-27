@@ -28,7 +28,7 @@ data_mean_concatenate = N.zeros((1, 135, 73))
 for i in range(1985, 2016):
     # Open input NetCDF file for each year
     fileobj = Dataset(
-        os.path.join(ROOT, "..", "..", "..", "Data", "RAW", "MAR_1985_2015", f"MARv3.9.2_NCEP1-20km_{i}.nc")
+        os.path.join(ROOT, "..", "..", "..", "Data", "RAW", "MAR_ANNUAL", "TTZ", f"annual_TTZ_MARv3.9.2_NCEP1-20km_{i}.nc")
     )
 
     # Extract coordinate variables
@@ -53,7 +53,7 @@ for i in range(1985, 2016):
     # EXTRACT VALUES
     # =========================
     # Select 10 time steps (239–248) at first vertical level (0)
-    z = fileobj.variables[q][239:249, 0, :, :]
+    z = fileobj.variables[q][239:249, :, :]
     # Reshape data into (10, 135, 73)
     data = N.reshape(z, (10, 135, 73))
     # Concatenate data across years

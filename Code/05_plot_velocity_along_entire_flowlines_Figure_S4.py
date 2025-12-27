@@ -17,9 +17,9 @@ import os
 # =========================
 ROOT = os.path.dirname(os.path.abspath(__file__))  # Root folder where this script is saved
 
-file_txt_data_folder_site_A = os.path.join(ROOT, "..", "data", "PROCESSED", "VELOCITY_ALONG_FLOWLINES_SITE_A")
-file_txt_data_folder_site_B = os.path.join(ROOT, "..", "data", "PROCESSED", "VELOCITY_ALONG_FLOWLINES_SITE_B")
-output_folder = os.path.join(ROOT, "..", "data", "OUTPUT", "FIGURES")
+file_txt_data_folder_site_A = os.path.join(ROOT, "..", "Data", "PROCESSED", "VELOCITY_ALONG_FLOWLINES_SITE_A")
+file_txt_data_folder_site_B = os.path.join(ROOT, "..", "Data", "PROCESSED", "VELOCITY_ALONG_FLOWLINES_SITE_B")
+output_folder = os.path.join(ROOT, "..", "Data", "OUTPUT", "FIGURES")
 
 
 #---------------------------------------------------READ DATA FROM SITE A---------------------------------------------------
@@ -433,6 +433,6 @@ ax7.text(12888.5, 970.539, r'2015', fontsize=17, fontweight="bold")
 
 #===========================================SAVE THE FIGURE(OPTIONAL)======================================
 # SAVE FIGURE AS PNG
-# output_path = os.path.join(output_folder, "velocity_along_entire_flowlines_site_A_and_B.png")
+# output_path = os.path.join(output_folder, "velocity_along_entire_flowlines_Figure_S4.png")
 # plt.savefig(output_path, dpi=300, bbox_inches="tight")
 # plt.close()

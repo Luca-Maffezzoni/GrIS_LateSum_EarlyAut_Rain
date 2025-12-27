@@ -1,5 +1,5 @@
 # The scripts "extract_sum_ruonff_1985_2015.py" and "SMB_1985_2015.py"
-# calculate, respectively, the 30-year cumulative runoff and SMB,
+# calculate, respectively, the 31-year cumulative runoff and SMB,
 # and save the results in the folder Data/PROCESSED/MET_GLACIO_PARAMETERS.
 
 # In the SITE_A folder, the scripts "extract_2_basins_RU_above_200mm.py"

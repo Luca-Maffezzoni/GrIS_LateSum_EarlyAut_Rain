@@ -21,7 +21,7 @@ q = "TTZ"
 # OPEN INPUT NETCDF FILE
 # =========================
 fileobj = Dataset(
-    os.path.join(ROOT, "..", "..", "..", "Data", "RAW", "MAR_1985_2015", "MARv3.9.2_NCEP1-20km_2015.nc")
+    os.path.join(ROOT, "..", "..", "..", "Data", "RAW", "MAR_ANNUAL", "TTZ", "annual_TTZ_MARv3.9.2_NCEP1-20km_2015.nc")
 )
 
 Y21 = fileobj.variables["Y21_155"][:]
@@ -37,7 +37,7 @@ z_units=fileobj.variables[q].units
 #long-name of variable q
 lon_name=fileobj.variables[q].long_name
 #extract values
-z=fileobj.variables[q][239:249,0,:,:]
+z=fileobj.variables[q][239:249,:,:]
 data=N.reshape(z,(10,135,73))
 data_mean=N.mean(data, axis=0)
 fileobj.close()

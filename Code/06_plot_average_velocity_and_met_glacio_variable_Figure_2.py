@@ -13,7 +13,7 @@ import pylab as pl
 import os
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-output_folder = os.path.join(ROOT, "..", "data", "OUTPUT", "FIGURES")
+output_folder = os.path.join(ROOT, "..", "Data", "OUTPUT", "FIGURES")
 
 #----------------------------------------------READ DATA FROM SITE A---------------------------------------
 

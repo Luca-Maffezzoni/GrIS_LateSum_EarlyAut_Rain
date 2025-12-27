@@ -21,7 +21,7 @@ q = "TTZ"
 # OPEN INPUT NETCDF FILE
 # =========================
 fileobj = Dataset(
-    os.path.join(ROOT, "..", "..", "..", "Data", "RAW", "MAR_1985_2015", "MARv3.9.2_NCEP1-20km_2013.nc")
+    os.path.join(ROOT, "..", "..", "..", "Data", "RAW", "MAR_ANNUAL", "TTZ", "annual_TTZ_MARv3.9.2_NCEP1-20km_2013.nc")
 )
 
 # Extract coordinate variables
@@ -46,7 +46,7 @@ lon_name = fileobj.variables[q].long_name
 # EXTRACT VALUES
 # =========================
 # Select data for 7 time steps (247–253) at first vertical level (0)
-z = fileobj.variables[q][247:254, 0, :, :]
+z = fileobj.variables[q][247:254, :, :]
 # Reshape data into (time, lat, lon)
 data = N.reshape(z, (7, 135, 73))
 # Compute mean across the time dimension

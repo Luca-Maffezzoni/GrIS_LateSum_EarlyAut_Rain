@@ -38,7 +38,8 @@ variable=fileobj.variables["TTZ"][:,:]
 variable_100 = variable*100
 lat=fileobj.variables["LAT"][:,:]
 lon=fileobj.variables["LON"][:,:]
-fileobj5=Dataset(os.path.join(ROOT, "..", "Data", "RAW", "MAR_1985_2015", "MARv3.9.2_NCEP1-20km_2015.nc"))
+#TAKE LON LAT FOR PLOT
+fileobj5=Dataset(os.path.join(ROOT, "..", "Data", "RAW", "MAR_ANNUAL", "RF", "annual_RF_MARv3.9.2_NCEP1-20km_2015.nc"))
 lat5=fileobj5.variables["LAT"][:,:]
 lon5=fileobj5.variables["LON"][:,:]
 
@@ -48,7 +49,8 @@ variable4=fileobj4.variables["TTZ"][:,:]
 variable4_100 = variable4*100
 lat4=fileobj4.variables["LAT"][:,:]
 lon4=fileobj4.variables["LON"][:,:]
-fileobj5=Dataset(os.path.join(ROOT, "..", "Data", "RAW", "MAR_1985_2015", "MARv3.9.2_NCEP1-20km_2015.nc"))
+#TAKE LON LAT FOR PLOT
+fileobj5=Dataset(os.path.join(ROOT, "..", "Data", "RAW", "MAR_ANNUAL", "RF", "annual_RF_MARv3.9.2_NCEP1-20km_2015.nc"))
 lat5=fileobj5.variables["LAT"][:,:]
 lon5=fileobj5.variables["LON"][:,:]
 
@@ -59,7 +61,8 @@ xvariable=fileobj6.variables["RF"][:,:]
 xvariable_1=xvariable/10
 xlat=fileobj6.variables["LAT"][:,:]
 xlon=fileobj6.variables["LON"][:,:]
-fileobj5=Dataset(os.path.join(ROOT, "..", "Data", "RAW", "MAR_1985_2015", "MARv3.9.2_NCEP1-20km_2015.nc"))
+#TAKE LON LAT FOR PLOT
+fileobj5=Dataset(os.path.join(ROOT, "..", "Data", "RAW", "MAR_ANNUAL", "RF", "annual_RF_MARv3.9.2_NCEP1-20km_2015.nc"))
 lat5=fileobj5.variables["LAT"][:,:]
 lon5=fileobj5.variables["LON"][:,:]
 
@@ -69,7 +72,8 @@ xvariable4=fileobj7.variables["RF"][:,:]
 xvariable_4=xvariable4/7
 xlat4=fileobj7.variables["LAT"][:,:]
 xlon4=fileobj7.variables["LON"][:,:]
-fileobj5=Dataset(os.path.join(ROOT, "..", "Data", "RAW", "MAR_1985_2015", "MARv3.9.2_NCEP1-20km_2015.nc"))
+#TAKE LON LAT FOR PLOT
+fileobj5=Dataset(os.path.join(ROOT, "..", "Data", "RAW", "MAR_ANNUAL", "RF", "annual_RF_MARv3.9.2_NCEP1-20km_2015.nc"))
 lat5=fileobj5.variables["LAT"][:,:]
 lon5=fileobj5.variables["LON"][:,:]
 

@@ -27,7 +27,7 @@ q = "RF"
 # =========================
 # Open the MAR dataset for 2015 (or 2013, adjust filename if needed)
 fileobj = Dataset(
-    os.path.join(ROOT, "..", "..", "..", "Data", "RAW", "MAR_1985_2015", "MARv3.9.2_NCEP1-20km_2015.nc")
+    os.path.join(ROOT, "..", "..", "..", "Data", "RAW", "MAR_ANNUAL", "RF", "annual_RF_MARv3.9.2_NCEP1-20km_2015.nc")
 )
 
 # =========================

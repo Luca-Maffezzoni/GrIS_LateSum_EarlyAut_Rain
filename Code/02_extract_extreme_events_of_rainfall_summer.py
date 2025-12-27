@@ -16,13 +16,13 @@ import numpy.ma as MA
 import pandas as pd
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-raw_folder1 = os.path.join(ROOT, "..", "data", "raw")
-raw_folder2 = os.path.join(ROOT, "..", "data", "raw","SUMMER_MAR")
+raw_folder1 = os.path.join(ROOT, "..", "Data", "RAW")
+raw_folder2 = os.path.join(ROOT, "..", "Data", "RAW","SUMMER_MAR")
 
-output_folder = os.path.join(ROOT, "..", "data", "output")
+output_folder = os.path.join(ROOT, "..", "Data", "PROCESSED", "EXTREME_RAINFALL_EVENTS", "SUMMER")
 os.makedirs(output_folder, exist_ok=True)
 
-#EXTRACT THE MASK FROM RIGNOT IN ORDER TO MASK THE VALUE OUTSIDE THE GRIS BASINS OF THE MAR MODEL OUTPUTS
+#EXTRACT THE MASK FROM RIGNOT IN ORDER TO MASK THE VALUE OUTSIDE THE GRIS BASINS SELECTED
 
 main_file = os.path.join(raw_folder1, "Rignot_Mask_without_zero.nc")
 
@@ -62,8 +62,9 @@ for x in range (2008,2017):
 data_finali_reshape=N.reshape(data_finali,(9,20))
 fileobj.close()
 
-#Save the Array in .txt format
-output_file = os.path.join(output_folder, "Extreme_rainfall_events_south_west_summer.txt")# if you put above 52 in the mask you will obtain the same result but for the west region
+#Save the Array in .txt format. If you put above 52 in the mask you will obtain the same result but for the west region here saved as "Extreme_rainfall_events_west_summer.txt"
+output_file = os.path.join(output_folder, "Extreme_rainfall_events_south_west_summer.txt")
+N.savetxt(output_file,data_finali_reshape,delimiter=";",newline="\r\n",fmt="%.2d")
 
 # In the first array, I extracted the 20 rainiest days of the season for each of the 9 years
 # using NumPy's argsort function. This produces a 9x20 array (9 rows, 20 columns) where each
@@ -101,10 +102,8 @@ for p in range(0,9):
     
 reshape_finale=N.reshape(dati_finali_2,(9,20))
 
-#Save the Array in .txt format
-
-output_file_2 = os.path.join(output_folder, "Extreme_rainfall_events_south_west_summer_2.txt")# if you put above 52 in the mask you will obtain the same result but for the west region
-
+#Save the Array in .txt format. If you put above 52 in the mask you will obtain the same result but for the west region saved as "Extreme_rainfall_events_west_summer_2.txt"
+output_file_2 = os.path.join(output_folder, "Extreme_rainfall_events_south_west_summer_2.txt")
 N.savetxt(output_file_2,reshape_finale,delimiter=";",newline="\r\n",fmt="%.2d")
 
 #===================================================================#
@@ -112,5 +111,5 @@ N.savetxt(output_file_2,reshape_finale,delimiter=";",newline="\r\n",fmt="%.2d")
 # Using the extraction of the largest daily cyclonic rainfall events identified above,
 # we manually selected the events that occurred during late summer and early autumn 
 # (August-September) for which ice velocity data were available both during and prior 
-# to the events. Starting from the days of maximum rainfall, the entire cyclonic event 
+# to the events. Starting from the day of maximum rainfall, the entire cyclonic event 
 # was then analyzed in detail.

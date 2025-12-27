@@ -14,7 +14,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))  # Root folder where this scri
 
 shape_data_folder = os.path.join(ROOT, "..", "Data", "INPUT", "GIS_SITE_A", "SITE_A_flow_lines_shape")#change to "GIS_SITE_B/SITE_B_flow_lines_shape" if you want result from site B
 raster_data_folder = os.path.join(ROOT, "..", "Data", "INPUT", "GIS_SITE_A", "RASTER_ICE_VELOCITY_SELECTED_SITE_A")#change to "GIS_SITE_B/RASTER_ICE_VELOCITY_SELECTED_SITE_B" if you want result from site B
-output_folder = os.path.join(ROOT, "..", "data", "PROCESSED", "VELOCITY_ALONG_FLOWLINES_SITE_A")#change to "VELOCITY_ALONG_FLOWLINES_SITE_B" if you want to put the results in site B folder
+output_folder = os.path.join(ROOT, "..", "Data", "PROCESSED", "VELOCITY_ALONG_FLOWLINES_SITE_A")#change to "VELOCITY_ALONG_FLOWLINES_SITE_B" if you want to put the results in site B folder
 
 # =========================
 # LOAD RASTER AND VECTOR LAYERS

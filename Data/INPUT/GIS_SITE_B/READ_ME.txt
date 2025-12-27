@@ -1,4 +1,4 @@
-Here you find the flowlines output coming from r.flow algorithm in GRASS-GIS applied on the multy_year_velocity dataset at the site B studied.
+Here you find the flowlines output coming from r.flow algorithm in GRASS-GIS applied on the multy_year_velocity dataset (multy_year_vv_SITE_B) at the site B studied.
 Subsequently, by the use of the DEM that you can find the RAW DATA (GrIS_Digital_elevation_model_90m_v01.1) along with the GRASS output we draw the four
 flow lines of this site B.
 

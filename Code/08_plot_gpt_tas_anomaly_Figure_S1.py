@@ -143,7 +143,8 @@ fileobj4 = Dataset(os.path.join(ROOT, "..", "Data", "PROCESSED", "METEOROLOGICAL
 variable4=fileobj4.variables["TTZ"][:,:]
 lat4=fileobj4.variables["LAT"][:,:]
 lon4=fileobj4.variables["LON"][:,:]
-fileobj5=Dataset(os.path.join(ROOT, "..", "Data", "RAW", "MAR_1985_2015", "MARv3.9.2_NCEP1-20km_2015.nc"))
+#TAKE LON LAT FOR PLOT
+fileobj5=Dataset(os.path.join(ROOT, "..", "Data", "RAW", "MAR_ANNUAL", "RF", "annual_RF_MARv3.9.2_NCEP1-20km_2015.nc"))
 lat5=fileobj5.variables["LAT"][:,:]
 lon5=fileobj5.variables["LON"][:,:]
 
@@ -152,7 +153,8 @@ fileobj = Dataset(os.path.join(ROOT, "..", "Data", "PROCESSED", "METEOROLOGICAL_
 variable=fileobj.variables["TTZ"][:,:]
 lat=fileobj.variables["LAT"][:,:]
 lon=fileobj.variables["LON"][:,:]
-fileobj5=Dataset(os.path.join(ROOT, "..", "Data", "RAW", "MAR_1985_2015", "MARv3.9.2_NCEP1-20km_2015.nc"))
+#TAKE LON LAT FOR PLOT
+fileobj5=Dataset(os.path.join(ROOT, "..", "Data", "RAW", "MAR_ANNUAL", "RF", "annual_RF_MARv3.9.2_NCEP1-20km_2015.nc"))
 lat5=fileobj5.variables["LAT"][:,:]
 lon5=fileobj5.variables["LON"][:,:]
 

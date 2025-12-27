@@ -4,7 +4,6 @@ Compute cumulative Runoff (RU) from MAR model NetCDF files
 Years: 1985–2015
 Author: lucam (adapted for repo structure)
 """
-
 import os
 import numpy as np
 import numpy.ma as ma
@@ -14,7 +13,7 @@ from netCDF4 import Dataset
 ROOT = os.path.dirname(__file__)
 
 # Input folders
-raw_dir = os.path.join(ROOT, "..", "..", "Data", "RAW", "MAR_1985_2015")
+raw_dir = os.path.join(ROOT, "..", "..", "Data", "RAW", "MAR_ANNUAL", "RU")
 mask_file = os.path.join(ROOT, "..", "..", "Data", "RAW", "Rignot_Mask_without_zero.nc")
 
 # Output folder
@@ -27,7 +26,7 @@ z = np.zeros((135, 73))
 for q in ["RU"]:
     for year in range(1985, 2016):
         # Open MAR NetCDF file for each year
-        infile = os.path.join(raw_dir, f"MARv3.9.2_NCEP1-20km_{year}.nc")
+        infile = os.path.join(raw_dir, f"annual_RU_MARv3.9.2_NCEP1-20km_{year}.nc")
         fileobj = Dataset(infile)
 
         # Read coordinates and variables
@@ -45,7 +44,7 @@ for q in ["RU"]:
         lon_name = fileobj.variables[q].long_name
 
         # Extract RU variable (all timesteps, first vertical level, full grid)
-        data = fileobj.variables[q][:, 0, :, :]
+        data = fileobj.variables[q][:, :, :]
 
         # Sum along time dimension → annual sum
         data_sum = np.sum(data, axis=0)

@@ -26,7 +26,7 @@ q = "CM"
 # =========================
 # Path to the raw MAR dataset for 2015
 fileobj = Dataset(
-    os.path.join(ROOT, "..", "..", "..", "Data", "RAW", "MAR_1985_2015", "MARv3.9.2_NCEP1-20km_2015.nc")
+    os.path.join(ROOT, "..", "..", "..", "Data", "RAW", "MAR_ANNUAL", "CM", "annual_CM_MARv3.9.2_NCEP1-20km_2015.nc")
 )
 
 # =========================

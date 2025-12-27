@@ -1,5 +1,5 @@
 # All the scripts in the SITE_A and SITE_B folders extract data separately
-# for the period selected around the two rainfall events, using as RAW data the files already extracted
+# for the period selected around the two rainfall events studied, using as RAW data the files already extracted
 # from the annual .nc files, selecting the specific season
 # (see Data/RAW/MAR_DATA_MET_GLACIO_VARIABLE_EXTRACTION).
 # These scripts compute daily mean values of albedo(AL1), latent heat flux (LHF), Long-wave downward (LWD), Long-wave upward (LWU)
